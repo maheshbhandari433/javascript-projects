@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script src="app.js"></script>
+
+  <h1>Gasoline price calculator</h1> 
+
+  <p>Make a program that asks the price of the gasoline and amount of money from the user. The program calculates how much gasoline the user gets with the money. The result is displayed in the screeen. If there are more than 10 litre, then message on the screen: "good, you can escape now", if less, it shows the message:"Ops, you have to stay here."</p>
+
+<form>
+
+    <div class = "form-group">
+    <label for = "price"> Price </label> 
+        <input id = "price" type = "number" required >
+    </div>
+    
+    <div class = "form-group">
+    <label for = "money"> Money </label> 
+        <input id = "money" type = "number" required >
+    </div>
+            
+</form>
+
+    <button class="calculate-button" onclick = "gasolineCalculator()">Calculate</button>
+
+    <p id = "calculate-result"></p>
+
+    <h1>Temperature Converter</h1>
+
+    <form id = "temp-form">
+        <div class = "form-group">
+            <label for = "celcius"> Celcius </label> 
+                <input id = "celcius"  type = "number" oninput = "tempConverter(this.id, this.value)" required >
+        </div>
+            
+        <div class = "form-group">
+            <label for = "fahrenheit"> Fahrenheit </label> 
+                <input id = "fahrenheit" type ="number" oninput = "tempConverter(this.id, this.value)" required >
+        </div>
+        <div class = "form-group">
+            <label for = "kelvin"> Kelvin </label> 
+                <input id = "kelvin" type = "number" oninput = "tempConverter(this.id, this.value)" required >
+        </div>
+        <div id = "preview"></div>
+    
+    </form>
+    
+</body>
+</html>

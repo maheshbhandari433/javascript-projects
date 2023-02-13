@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overscroll-behavior: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ff0400;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: #ffa600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+}
+
+.bg {
+    background: white;
+    color:rgb(0, 128, 122);
+    padding: 0.5rem;
+}
+
+.bg h1 {
+    font-size: small;
+}
+
+.mobile-menu {
+    background: none;
+    border: none;
+    box-shadow: none;
+    color: white;
+    display: none;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+}
+
+section {
+    min-height: 50vh;
+    padding: 1rem;
+    scroll-margin-top: 5rem;
+}
+
+#home {
+    background: linear-gradient(to top, red, orange); 
+}
+
+#about {
+    background: linear-gradient(to top, green, lightgreen); 
+}
+
+
+#projects {
+    background: linear-gradient(to bottom, rgb(0, 128, 122), rgb(0, 102, 255));
+}
+
+#contact {
+    background: linear-gradient(to top, blue, lightblue); 
+    padding: 2rem;
+}
+
+.btn-primary {
+    border: none;
+    border-radius: 2px;
+    box-shadow: none;
+    padding: 0.5rem 1rem;
+    background-color: antiquewhite;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: none;
+
+}
+
+@media (max-width: 800px) {
+    nav ul {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    ul.responsive {
+        display: block;
+        background-color: white;
+        color: black;
+        position: absolute;
+        left: 0;
+        top: 5rem;
+        width: 100%;
+    }
+
+    ul.responsive li {
+        display: block;
+        margin: 1rem;
+    }
+
+    header.bg.mobile-menu {
+        color:#333;
+    }
+}
+
+/* overlay modal */
+
+ /* .overlay {
+    background-color: darkgreen;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.8;
+    
+} 
+
+.overlay.visible {
+    display: flex;
+} 
+
+ .modal {
+    background-color: white;
+    height: 50vh;
+    width: 75vw;
+    padding: 2rem;
+    border-radius: 2px;
+    position: relative;
+    
+}
+
+.modal button {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+}  */

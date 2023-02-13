@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+</head>
+<body>
+<form>
+<h1>Linear gradient generator</h1>
+
+<h2>Colors</h2>
+
+<div class = 'color-box'>
+    <input type = 'color' id = 'color1' value = '#00ffc8'>
+    <input type = 'color' id = 'color2' value = '#ffff00'>
+</div>
+
+<h2>Direction</h2>
+
+<div class = 'direction-grid'>
+
+<input type = 'radio' id = 'to-bottom-right' value = 'to bottom right' name = 'direction' checked>
+<label for = 'to-bottom-right'>
+<span class="material-symbols-outlined">south_east</span>
+</label>
+
+<input type = 'radio' id = 'to-bottom' value = 'to bottom' name = 'direction'>
+<label for = 'to-bottom'>
+<span class="material-symbols-outlined">south</span></label>
+
+<input type = 'radio' id = 'to-bottom-left' value = 'to bottom left' name = 'direction'>
+<label for = 'to-bottom-left'>
+<span class="material-symbols-outlined">south_west</span>
+</label>
+
+<input type = 'radio' id = 'to-right' value = 'to right' name = 'direction'>
+<label for = 'to-right'>
+<span class="material-symbols-outlined">east</span>
+</label>
+
+<div></div>
+
+<input type = 'radio' id = 'to-left' value = 'to left' name = 'direction'>
+<label for = 'to-left'>
+<span class="material-symbols-outlined">west</span>
+</label>
+
+<input type = 'radio' id = 'to-top-right' value = 'to top right' name = 'direction'>
+<label for = 'to-top-right'>
+<span class="material-symbols-outlined">north_east</span>
+</label>
+
+<input type = 'radio' id = 'to-top' value = 'to top' name = 'direction' checked>
+<label for = 'to-top'>
+<span class="material-symbols-outlined">north</span>
+</label>
+
+<input type = 'radio' id = 'to-top-left' value = 'to top left' name = 'direction'>
+<label for = 'to-top-left'>
+<span class="material-symbols-outlined">north_west</span>
+</label>
+
+</div>
+
+<h2>CSS</h2>
+
+<p id="p-text">background: linear-gradient(to right, red, blue);</p>
+</form>
+
+
+  <script src='app.js'></script>
+   
+</body>
+</html>

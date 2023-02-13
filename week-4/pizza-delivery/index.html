@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order a Pizza</title>
+    <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+
+<h1>Order a pizza</h1> 
+
+<form id = "input-form" name ="input-form">
+    <div class = "user-name">
+        <label for = "name"> Enter your name </label> 
+            <input id = "name" type = "text" name="name" required>
+        </div>
+  
+    <div class ="size">
+<input type="radio" id="for-two" name="size" value="for-two" checked>
+       <label for="for-two">For two, the price is 7,50 €</label>
+
+<input type="radio" id="for-four" name="size" value="for-four">
+      <label for="for-four">For four, the price is 10,50 €</label>
+
+<input type="radio" id="for-six" name="size" value="for-six">
+      <label for="for-six">For six, the price is 12,50 €</label>
+
+<input type="radio" id="for-eight" name="size" value="for-eight">
+      <label for="for-eight">For eight, the price is 15,50€</label>
+    </div>
+
+
+    <div class = "topping">
+<input type="checkbox" id="salami" name="topping" value="salami" checked>
+        <label for="salami"> Salami</label>
+
+<input type="checkbox" id="chickem" name="topping" value="chicken" checked>
+        <label for="chicken"> Chicken</label>
+
+<input type="checkbox" id="mushroom" name="topping" value="mushroom" checked>
+        <label for="mushroom"> Mushroom</label>
+
+<input type="checkbox" id="vegan" name="topping" value="vegan">
+        <label for="vegan"> Vegan</label>
+
+<input type="checkbox" id="pork" name="topping" value="pork">
+        <label for="pork"> Pork</label>
+
+<input type="checkbox" id="beef" name="topping" value="beef">
+        <label for="beef"> Beef</label>
+
+ <input type="checkbox" id="double-cheese" name="topping" value="double-cheese">
+        <label for="double-cheese"> Double-cheese</label>
+
+<input type="checkbox" id="ananas" name="topping" value="ananas">
+        <label for="anannas"> Ananas</label>
+
+<input type="checkbox" id="Onion" name="topping" value="onion">
+        <label for="onion"> Onion</label>
+
+<input type="checkbox" id="tomato" name="topping" value="tomato">
+        <label for="tomato"> Tomato</label>
+    </div>
+
+
+<div class = "delivery-method">
+    <label for="delivery">Choose delivey method:</label>
+    <select name="delivery-option" id="delivery-option">
+        <option value="delivery-home">Delivery home,+5€</option>
+
+        <option value="eat-in">Eat-in</option>  
+
+        <option value="pick-up">Pick-up</option> 
+
+
+<div class = "submit-btn">
+<input type="submit" value="SUBMIT" id="submit-button" name ="submit">
+
+</div>
+</div>
+
+</form> 
+
+
+<form id = "output-form">
+   
+</form>
+
+<script src="app.js"></script>
+
+</body>
+</html>
