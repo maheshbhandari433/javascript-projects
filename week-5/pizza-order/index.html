@@ -5,8 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizza Order</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <main>
+        <section>
 <form>
 
     <h1> Order a pizza</h1>
@@ -72,12 +75,13 @@
 
 <select name="delivery" id="delivery">
 <option value="" selected disabled>Select one...</option>
-<option value="home-delivery">Home-delivery</option>
+<option value="home-delivery">Home-delivery, +5€</option>
 <option value="eat-in">Eat-in</option>
 <option value="pick-up">Pick-up</option>
 </select>
 
 </form>
+</section>
 
 <div id="order">
     <p><b>Your Order</b></p>
@@ -88,6 +92,8 @@
     <p>Total Price: <span id="order-price"></span></p>
 
 </div>
+
+</main>
 
    <script src = 'app.js'></script>
 

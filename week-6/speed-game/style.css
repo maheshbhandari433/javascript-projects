@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aqua;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 5rem;
+}
+
+p {
+    text-align: center;
+    padding: 2rem;
+}
+
+.circles {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2rem;
+    padding: 2rem;
+}
+
+.circle1, .circle2, .circle3, .circle4 {
+    height: 150px;
+    width: 150px;
+    background-color: #4df5ac;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+button {
+    width: 10vw;
+    height: 7vh;
+    border-radius: 1rem;
+    border-style: none;
+    background-color: rgb(99, 236, 222);
+}
+
+

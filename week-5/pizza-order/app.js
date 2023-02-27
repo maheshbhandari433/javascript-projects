@@ -21,6 +21,7 @@ function outputForm () {
     let toppingResult = []
     let deliveryResult = delivery.value
     
+    
     size.forEach((item) => {
         if(item.checked) {
         sizeResult = item.value
@@ -62,7 +63,7 @@ function outputForm () {
         price = price + (toppingResult.length - 4) * 0.5
     }
 
-    if(deliveryResult =='home') {
+    if(deliveryResult =='home-delivery') {
         price = price + 5
     }
 
