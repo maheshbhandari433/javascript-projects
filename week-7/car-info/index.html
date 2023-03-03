@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Information</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Cars information</h1>
+
+    <main>
+
+        <section>
+
+<form name="myForm"
+ onsubmit=""
+ method="post"
+ class="input-form">
+
+    <div class="field-area">
+        <label for="name">Name</label>
+        <input type="text" id="name">
+    </div>
+
+    <div class="field-area">
+        <label for="licence">Licence</label>
+        <input type="text" id="licence">
+    </div>
+
+    <div class="field-area">
+        <label for="maker">Maker</label>
+        <input type="text" id="maker">
+    </div>
+
+    <div class="field-area">
+        <label for="model" aria-required="">Model</label>
+        <input type="text" id="model">
+    </div>
+
+    <div class="field-area">
+        <label for="owner">Owner</label>
+        <input type="text" id="owner">
+    </div>
+
+    <div class="field-area">
+        <label for="price">Price</label>
+        <input type="text" id="price">
+    </div>
+
+    <div class="field-area">
+        <label for="color">Color</label>
+        <input type="text" id="color">
+    </div>
+
+    <div class="add-button-wrapper">
+    <button id="add-button">
+        Add
+    </button>
+    </div>
+</form>
+
+    <form class="output-form">
+        <table id="output-table">
+            <tr>
+                <td>Name</td>
+                <td>Licence</td>
+                <td>Maker</td>
+                <td>Owner</td>
+                <td>Model</td>
+                <td>Price</td>
+                <td>Color</td>
+            </tr>
+        </table>
+    </form>
+</section>
+    
+        <div class="search">
+    
+            <input type="text" id="search-box">
+            <button id="search-button">
+                Search by name
+            </button>
+    
+            <div id="search-result">
+                
+            </div>
+    
+        </div>
+   
+
+</main>
+
+
+
+    <script src="app.js">
+        
+    </script>
+
+</body>
+</html>
