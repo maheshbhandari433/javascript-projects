@@ -21,11 +21,6 @@
  class="input-form">
 
     <div class="field-area">
-        <label for="name">Name</label>
-        <input type="text" id="name">
-    </div>
-
-    <div class="field-area">
         <label for="licence">Licence</label>
         <input type="text" id="licence">
     </div>
@@ -65,11 +60,10 @@
     <form class="output-form">
         <table id="output-table">
             <tr>
-                <td>Name</td>
                 <td>Licence</td>
                 <td>Maker</td>
-                <td>Owner</td>
                 <td>Model</td>
+                <td>Owner</td>
                 <td>Price</td>
                 <td>Color</td>
             </tr>
@@ -81,7 +75,11 @@
     
             <input type="text" id="search-box">
             <button id="search-button">
-                Search by name
+                Search by licence
+            </button>
+
+            <button id="calculate-discount">
+                Show discount
             </button>
     
             <div id="search-result">

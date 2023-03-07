@@ -54,7 +54,7 @@ input {
     padding: 1rem;
 }
 
-#add-button, #search-button {
+#add-button, #search-button, #calculate-discount {
     width: 10rem;
     height: 2rem;
     border-radius: 0.5rem;

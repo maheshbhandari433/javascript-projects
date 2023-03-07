@@ -1,23 +1,23 @@
 const addButton = document.querySelector('#add-button')
 const searchButton = document.querySelector('#search-button')
+const calculateDiscount = document.querySelector('#calculate-discount')
 
 
 
 function displayDetails(e) {
-     e.preventDefault()  
+     e.preventDefault()
 
-const name = document.querySelector('#name').value
-const licence = document.querySelector('#licence').value
-const maker = document.querySelector('#maker').value
-const model = document.querySelector('#model').value
-const owner = document.querySelector('#owner').value
-const price = document.querySelector('#price').value
-const color = document.querySelector('#color').value
+
+let licence = document.querySelector('#licence').value
+let maker = document.querySelector('#maker').value
+let model = document.querySelector('#model').value
+let owner = document.querySelector('#owner').value
+let price = document.querySelector('#price').value
+let color = document.querySelector('#color').value
 
 
 let row = 1
-let table = document.querySelector('#output-table')
-  
+let table = document.querySelector('#output-table') 
 
      let newRow = table.insertRow(row)
 
@@ -27,119 +27,157 @@ let table = document.querySelector('#output-table')
      let cell4 = newRow.insertCell(3)
      let cell5 = newRow.insertCell(4)
      let cell6 = newRow.insertCell(5)
-     let cell7 = newRow.insertCell(6)
-   
+     
 
- /*  let tr = document.getElementsByTagName('tr')
-    console.log(tr) */
-
-      /* for(let i = 0; i < tr.length; i ++) { */
+     let tr = table.getElementsByTagName('tr')
+     
+      for(let i = 0; i < tr.length; i ++) { 
         
+  let itemsArray = []
+  let item = localStorage.getItem('localdata')
 
-    cell1.innerHTML = name
-    cell2.innerHTML = licence
-    cell3.innerHTML = maker
-    cell4.innerHTML = model
-    cell5.innerHTML = owner
-    cell6.innerHTML = price
-    cell7.innerHTML = color
-
-    row ++
-
-    addData() 
- 
-    }
-
-
-/*   } */
+  if(item != null)
+  itemsArray = JSON.parse(item)
+  console.log(item)
+       
+    
+    cell1.innerHTML = licence
+    cell2.innerHTML = maker
+    cell3.innerHTML = model
+    cell4.innerHTML = owner
+    cell5.innerHTML = price
+    cell6.innerHTML = color
   
+     } 
 
-function addData() {
+     addData()
+  }
+ 
 
-  let carArray = []
+  function addData() {
+
+  let carArray = [] 
   let tr = document.getElementsByTagName('tr')
     console.log(tr)
-
+    
       for(let i = 0; i < tr.length; i ++) {
 
 carArray.push({
-  name: tr[i].getElementsByTagName('td')[0].textContent,
-  licence: tr[i].getElementsByTagName('td')[1].textContent,
-  maker: tr[i].getElementsByTagName('td')[2].textContent,
-  model: tr[i].getElementsByTagName('td')[3].textContent,
-  owner: tr[i].getElementsByTagName('td')[4].textContent,
-  price: tr[i].getElementsByTagName('td')[5].textContent,
-  color: tr[i].getElementsByTagName('td')[6].textContent
+  licence: tr[i].getElementsByTagName('td')[0].textContent,
+  maker: tr[i].getElementsByTagName('td')[1].textContent,
+  model: tr[i].getElementsByTagName('td')[2].textContent,
+  owner: tr[i].getElementsByTagName('td')[3].textContent,
+  price: tr[i].getElementsByTagName('td')[4].textContent,
+  color: tr[i].getElementsByTagName('td')[5].textContent
 }) 
+
     }
 
-localStorage.setItem('localdata', JSON.stringify(carArray))
-
-displayDetails()
+localStorage.setItem('localdata', JSON.stringify(carArray)) 
 
 } 
- 
 
-/* 
+
+ 
 function getData() {
 
   let itemsArray = []
   let item = localStorage.getItem('localdata')
-  console.log(item)
+  
+
   if(item != null)
   itemsArray = JSON.parse(item)
-  console.log(itemsArray)
+
+ /*  console.log(item)
+
+   console.log(itemsArray[0].name ,itemsArray[1].name)
+   console.log(itemsArray[0].licence ,itemsArray[1].licence) */  
+
+}
+
+ getData() 
+
+
+function deleteData() {
+
+  localStorage.clear()
+
+}  
+
+
+function discount() {
+
+  let searchResult = document.querySelector('#search-result')
+  let filter = document.getElementById('search-box').value
+
+  let tr = document.getElementsByTagName('tr')
+
+  for(let i = 0; i < tr.length; i ++) {
+
+    let licence = tr[i].getElementsByTagName('td')[0].textContent
+    let price = tr[i].getElementsByTagName('td')[4].textContent
+    
+    if(price > 20000) {
+      price = 'Discount is 25% and discount amount is ' + price * 0.25
+    } 
+    else if(price < 5000) {
+      price = 'Discount is 10% and discount amount is ' + price * 0.1
+    }
+    else if(price > 5000 && price < 20000) {
+      price = 'Discount is 10% and discount amount is ' + price * 0.15
+    }  
+    else {
+      price = 'Invalid input'
+    }
+
+        if(licence.includes(filter)) {
+         
+          searchResult.textContent = price
+
+         }
+
+        }
 
 }
 
 
- function deleteData() {
-
-  localStorage.clear()
-
-}  */ 
 
 
-  function searchByName() {
+  function searchByLicence() {
 
     let searchResult = document.querySelector('#search-result')
     console.log(searchResult.textContent) 
 
     let filter = document.getElementById('search-box').value
-    let outputTable = document.getElementById('output-table')
-
-    let tr = outputTable.getElementsByTagName('tr')
-    console.log(tr)
-
     
+    let tr = document.getElementsByTagName('tr')
+   
     for(let i = 0; i < tr.length; i ++) {
 
-    let name = tr[i].getElementsByTagName('td')[0]
-    let licence = tr[i].getElementsByTagName('td')[1]
-    let maker = tr[i].getElementsByTagName('td')[2]
-      
-      console.log(name.textContent)
-      console.log(licence.textContent)
-      console.log(maker.textContent)
+    
+    let licence = tr[i].getElementsByTagName('td')[0].textContent
+    let maker = tr[i].getElementsByTagName('td')[1].textContent
+    let model = tr[i].getElementsByTagName('td')[2].textContent
+    let owner = tr[i].getElementsByTagName('td')[3].textContent
       
 
-        if(name.textContent.includes(filter)) {
+        if(licence.includes(filter)) {
 
-          searchResult.textContent = `Name of the car is ${name.textContent}, license is ${licence.textContent} and maker is ${maker.textContent}`
+          searchResult.textContent = `Maker of the car is ${maker}, model is ${model} and owner is ${owner}`
 
-        } 
+         } 
 
-       /*  else {
+      /*  else {
           searchResult.textContent = 'Not found'
-        }  */
+        } */   
 
-        }
+         }
    
 }  
 
-/* validateforms */
 
-function validateforms() {
+
+ function validateforms() {
 
   let x=document.forms["myForm"][0].value
   console.log(x)
@@ -149,9 +187,10 @@ function validateforms() {
     
   }
   
-}
+}  
 
-/* validateforms() */
+
 
 addButton.addEventListener('click', displayDetails)
-searchButton.addEventListener('click', searchByName)
+searchButton.addEventListener('click', searchByLicence)
+calculateDiscount.addEventListener('click', discount)
